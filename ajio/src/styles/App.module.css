@@ -9,4 +9,18 @@
     font-family: sans-serif;
     font-size: 16px;
     box-sizing: border-box;
+    position: relative;
+    /* top:100px; */
+    animation: moveUp 1s ease-out ;
+   
+}
+
+@keyframes moveUp{
+    0%{
+       transform: translateY(-200px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }

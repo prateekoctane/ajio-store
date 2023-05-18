@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.mainContainer{
+    /* position: relative; */
+    /* border: 1px solid black; */
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.innerCarousel{
+    /* border: 1px solid blue; */
+    position: relative;
+    text-align: center;
+    display: flex;
+    gap: 11px;
+    /* justify-content: space-evenly; */
+    height: 300px;
+    padding: 10px;
+
+}
+
+.cards{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    min-width: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}

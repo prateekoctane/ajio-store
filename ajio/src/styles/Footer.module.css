@@ -1,0 +1,36 @@
+.footer{
+    /* border:1px solid black; */
+    height: 550px;
+    padding: 80px;
+    background-color: rgb(33, 32, 30);
+}
+
+.footer__contentBox{
+    /* border: 1px solid white; */
+    padding: 10px;
+    line-height: 25px;
+    background-color:whitesmoke;
+    border-radius: 10px;
+    /* box-shadow: rgba(128, 128, 128, 0.674) 1.95px 1.95px 2.6px; */
+    /* box-shadow:rgba(109, 109, 109, 0.674) 8px 8px 2.6px; */
+}
+
+.footer__linkText{
+    color: rgb(33, 32, 30);
+    font-size: 15px;
+    transition: all 1s ease;
+    font-weight: bold;
+}
+
+.footer__linkText:hover{
+    cursor: pointer;
+    font-size: 20px;
+    /* text-shadow: .1em .1em 0px rgba(71, 71, 71, 0.668); */
+    transform: translateY(-2px);
+}
+
+.footer__paymentMethod{
+
+    color: whitesmoke;
+
+}

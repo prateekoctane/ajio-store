@@ -1,18 +1,33 @@
-import { Box, Heading, Image, Input, Button, Text, Link } from "@chakra-ui/react"
+import { Box, Heading, Image, Input, Button, Text } from "@chakra-ui/react"
+import { Link } from "react-router-dom";
 import styles from "../styles/Navbar.module.css";
-
 import { CiSearch } from "react-icons/ci";
 import { BsFillHeartFill, BsBagFill, BsHeartbreakFill } from "react-icons/bs";
 // BsFillHeartFill
-import { useState} from "react";
+import { MdClose } from "react-icons/md";
+import { useState } from "react";
 
 
 
 
 export function Navbar() {
 
-    const [display, setDisplay ] = useState<number>(0)
-    console.log(display, "display")
+    const [right, setRight] = useState<number>(-1500);
+   
+
+    function hoverOut() {
+        
+        setRight(-1500)
+    }
+
+    function hoverIn() {
+
+        
+        setRight(0)
+    }
+ 
+    console.log(right, "right")
+
 
     return <Box className={styles.container} >
 
@@ -25,9 +40,9 @@ export function Navbar() {
         </Heading>
 
         <Box className={styles.login_register} >
-            <Text> <span> <Link>Login</Link> </span> | <span> <Link>Register</Link> </span> </Text>
+            <Text> <span> <Link to="/login" >Login</Link> </span> | <span> <Link to="/register" >Register</Link> </span> </Text>
             <Box display="flex" justifyContent="space-around" mt="10px" >
-                <Link>< BsBagFill size={25} /></Link> <Link>< BsFillHeartFill size={25} /></Link>
+                <Link to="#" >< BsBagFill size={25} /></Link> <Link to="#" >< BsFillHeartFill size={25} /></Link>
             </Box>
         </Box>
 
@@ -37,18 +52,18 @@ export function Navbar() {
         </Box>
 
         <Box className={styles.categoryBox} >
-            
-          
-           <Box _hover={{cursor:"pointer"}} onMouseOver={()=>setDisplay(1)} onMouseOut={()=>setDisplay(0)} className={styles.subBox} id={styles.subBox5} >HOME & KITCHEN</Box>
-           <Box _hover={{cursor:"pointer"}} onMouseOver={()=>setDisplay(1)} onMouseOut={()=>setDisplay(0)} className={styles.subBox} id={styles.subBox4} >INDIE</Box>
-           <Box _hover={{cursor:"pointer"}} onMouseOver={()=>setDisplay(1)} onMouseOut={()=>setDisplay(0)} className={styles.subBox} id={styles.subBox3} >KIDS</Box>
-           <Box _hover={{cursor:"pointer"}} onMouseOver={()=>setDisplay(1)} onMouseOut={()=>setDisplay(0)} className={styles.subBox} id={styles.subBox2} >WOMEN</Box>
-           <Box _hover={{cursor:"pointer"}} onMouseOver={()=>setDisplay(1)} onMouseOut={()=>setDisplay(0)} className={styles.subBox} id={styles.subBox1} >MEN</Box>
+
+
+            <Box _hover={{ cursor: "pointer" }} onMouseOver={hoverIn} className={styles.subBox} id={styles.subBox5} >HOME & KITCHEN</Box>
+            <Box _hover={{ cursor: "pointer" }} onMouseOver={hoverIn}  className={styles.subBox} id={styles.subBox4} >INDIE</Box>
+            <Box _hover={{ cursor: "pointer" }} onMouseOver={hoverIn}  className={styles.subBox} id={styles.subBox3} >KIDS</Box>
+            <Box _hover={{ cursor: "pointer" }} onMouseOver={hoverIn}  className={styles.subBox} id={styles.subBox2} >WOMEN</Box>
+            <Box _hover={{ cursor: "pointer" }} onMouseOver={hoverIn}  className={styles.subBox} id={styles.subBox1} >MEN</Box>
 
         </Box>
 
-       <Box className={styles.onHover} opacity={display} transition="opacity 1s" >
-
-       </Box>
+        <Box className={styles.onHover} right={right} transition="all 1s ease-out" >
+          <Button variant="unstyled"  onClick={hoverOut} position="relative" top="50px" left="95%" ><MdClose size={30} /></Button>
+        </Box>
     </Box>
 }

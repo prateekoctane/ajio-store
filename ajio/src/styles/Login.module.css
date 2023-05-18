@@ -1,0 +1,164 @@
+.loginBody {
+    background-color: rgb(33, 32, 30);
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.loginBody__form {
+    /* border: 1px solid white; */
+    padding: 70px;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.626);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(108, 25, 25, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 3;
+    animation: moveInRightForm 1s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInRightForm{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    z-index: 1;
+    left: 300px;
+    background-color: rgb(81,29,199);
+    clip-path: circle(50% at 50% 50%);
+    animation: moveInRightCircle 1s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInRightCircle{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.circle2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    left: 600px;
+    top: 100px;
+    background-color: rgb(242,176,47);
+    clip-path: circle(50% at 50% 50%);
+    animation: moveInRightCircle2 1s ease-out 2s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes moveInRightCircle2{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.designBox{
+    position: absolute;
+    border: 2px dashed whitesmoke;
+    width: 600px;
+    height:400px;
+    left: 250px;
+    top: 50px;
+    animation: moveInRightDesignBox 1s ease-out 5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInRightDesignBox{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.squareBox{
+    position: absolute;
+    /* border: 2px dashed whitesmoke; */
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    left: 650px;
+    top: 280px;
+    background-color: rgb(74,166,120);
+    animation: moveInRightDesignBox 1s ease-out 3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInRightSquareBox{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.ajio{
+    position: absolute;
+    z-index: 10;
+    left: 330px;
+    color: whitesmoke;
+    text-shadow:.05em .05em 10px rgba(11, 11, 11, 0.668);
+    font-weight: bold;
+    font-size: 70px;
+    
+}
+
+.welcomes{
+    position: absolute;
+    z-index: 10;
+    top: 150px;
+    left: 630px;
+    color: whitesmoke;
+    text-shadow:.05em .05em 10px rgba(11, 11, 11, 0.668);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.you{
+    position: absolute;
+    z-index: 10;
+    top: 500px;
+    left: 800px;
+    color: whitesmoke;
+    text-shadow:.05em .05em 10px rgba(11, 11, 11, 0.668);
+    font-weight: bold;
+    font-size: 50px;
+}
+

@@ -1,0 +1,24 @@
+.singleProductContainer{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.singleProductContainer__slideShow{
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.singleProductContainer__productImage{
+    border: 3px solid blue;
+}
+
+.singleProductContainer__productDetails{
+    border: 3px solid green;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
